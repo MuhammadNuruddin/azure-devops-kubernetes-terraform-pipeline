@@ -25,13 +25,13 @@ jobs:
   - script: echo Job2!
     displayName: 'Run a one-line script'
 - job: Job3
-  steps:
   dependsOn: Job1
+  steps:
   - script: echo Job3!
     displayName: 'Run a one-line script'
 - job: Job4
-  steps:
   dependsOn:
+  steps:
   - Job2
   - Job3
   - script: echo Job4!
